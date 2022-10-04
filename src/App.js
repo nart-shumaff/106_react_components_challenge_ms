@@ -3,24 +3,91 @@ import "./App.css";
 import characters from "./data/characters.json";
 
 const App = () => {
-  const [loggedCharacter, setLoggedCharacter] = useState(0);
+  const [loggedCharacter, setLoggedCharacter] = useState(null);
+  const [allCharacters, setAllCharacters] = useState([...characters]);
+  const [chosen, setChosen] = useState([]);
+
+  const login = (id) => {
+    setAllCharacters([
+      ...characters.filter((character) => character.id !== id),
+    ]);
+    setLoggedCharacter(characters.find((c) => c.id === id));
+    setChosen([]);
+  };
+
+  const logout = () => {
+    setAllCharacters([...characters]);
+    setLoggedCharacter(null);
+  };
+
+  const addCharacter = (id) => {
+    if (chosen.length === 5) {
+      window.alert("Cannot choose more than 5");
+      return;
+    }
+
+    setAllCharacters([
+      ...characters
+        .filter((character) => character.id !== id)
+        .filter((character) => character.id !== loggedCharacter.id)
+        .filter((character) => !chosen.includes(character.id)),
+    ]);
+    setChosen([...chosen, id]);
+  };
+
+  const removeCharacter = (id) => {
+    const filteredChosen = chosen.filter((chosenId) => chosenId !== id);
+
+    setChosen(filteredChosen);
+
+    setAllCharacters([
+      ...characters
+        .filter((character) => character.id !== loggedCharacter.id)
+        .filter((character) => !filteredChosen.includes(character.id)),
+    ]);
+  };
 
   return (
     <div className='App'>
       <nav>
-        <div class='avatar'>
-          <img src={characters[loggedCharacter].image} />
-          <p>David Rajcher</p>
-        </div>
-        <button class='logout'>Logout</button>
+        {loggedCharacter && (
+          <>
+            <div class='avatar'>
+              <img src={loggedCharacter.image} />
+              <p>{loggedCharacter.name}</p>
+            </div>
+            <button class='logout' onClick={logout}>
+              Logout
+            </button>
+          </>
+        )}
       </nav>
-      {!loggedCharacter ? (
-        <div></div>
-      ) : (
-        <div id='main'>
-          <section id='chosen-container'></section>
+      <div id='main'>
+        {!loggedCharacter ? (
+          <>
+            <h1>Choose Your Main Character</h1>
+            <section id='character-container'>
+              {characters.slice(0, 5).map((character) => (
+                <div class='card card-login'>
+                  <img src={character.image} alt='character' />
+                  <div className='card-container'>
+                    <h2>{character.name}</h2>
+                  </div>
+                  <div class='button-container'>
+                    <button
+                      class='choose-button'
+                      onClick={() => login(character.id)}
+                    >
+                      Choose
+                    </button>
+                  </div>
+                </div>
+              ))}
+            </section>
+          </>
+        ) : (
           <section id='character-container'>
-            {characters.map((character) => (
+            {allCharacters.map((character) => (
               <div class='card'>
                 <img src={character.image} alt='character' />
                 <div className='card-container'>
@@ -36,31 +103,50 @@ const App = () => {
                   </p>
                 </div>
                 <div class='button-container'>
-                  <button class='choose-button'>Choose</button>
+                  <button
+                    class='choose-button'
+                    onClick={() => addCharacter(character.id)}
+                  >
+                    Choose
+                  </button>
                 </div>
               </div>
             ))}
           </section>
-        </div>
-      )}
-      <aside>
-        <form>
-          <input name='search' id='search' placeholder='search' />
-          <label for='gender'>
-            Gender
-            <select name='gender' id='gender'></select>
-          </label>
-          <label for='status'>
-            Status
-            <select name='status' id='status'></select>
-          </label>
-          <label for='species'>
-            Species
-            <select name='species' id='species'></select>
-          </label>
-        </form>
-      </aside>
+        )}
+      </div>
 
+      <aside>
+        {loggedCharacter && (
+          <section id='chosen-container'>
+            {chosen.length === 0 ? (
+              <div>No Character was chosen</div>
+            ) : (
+              <>
+                {chosen.map((id) => {
+                  const character = characters.find(
+                    (character) => character.id === id
+                  );
+                  return (
+                    <div class='chosen-card'>
+                      <div class='avatar'>
+                        <img src={character.image} />
+                        <h2>{character.name}</h2>
+                      </div>
+                      <button
+                        class='remove-button'
+                        onClick={() => removeCharacter(character.id)}
+                      >
+                        Remove
+                      </button>
+                    </div>
+                  );
+                })}
+              </>
+            )}
+          </section>
+        )}
+      </aside>
       <footer>
         <img src='../assets/avatar.png' />
         <p>Created by David L. Rajcher</p>

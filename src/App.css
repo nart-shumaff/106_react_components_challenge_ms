@@ -1,38 +1,183 @@
 .App {
-  text-align: center;
+  height: 100%;
+  display: grid;
+  grid-template-rows: 80px auto 80px;
+  grid-template-columns: 1fr 1fr 200px;
+  grid-template-areas:
+    "nav nav nav"
+    "main main side"
+    "footer footer footer";
+  background-color: #f5f5f5;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
+nav {
+  height: 80px;
+  grid-area: nav;
+  z-index: 999;
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  transition: 0.3s;
+  background-color: #fff;
+  padding: 0 20px;
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
   display: flex;
-  flex-direction: column;
+  justify-content: space-between;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+}
+
+nav .avatar {
+  display: flex;
+  align-items: center;
+}
+
+nav img {
+  height: 40px;
+  width: 40px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin-right: 20px;
+}
+
+button {
+  padding: 12px 24px;
+  border-radius: 8px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+button:active {
+  scale: 85%;
+}
+
+button.logout {
+  background-color: gray;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+button.logout:hover {
+  background-color: rgb(190, 190, 190);
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+button.logout:active {
+  background-color: gray;
+}
+
+#main {
+  grid-area: main;
+  overflow: scroll;
+  height: 100%;
+}
+
+aside {
+  grid-area: side;
+  background-color: #fff;
+  padding-top: 20px;
+}
+
+#character-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding: 20px;
+  justify-content: center;
+}
+.card {
+  width: 300px;
+}
+
+.card img {
+  width: 100%;
+  object-fit: cover;
+  max-height: 225px;
+}
+
+.card {
+  /* Add shadows to create the "card" effect */
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  transition: 0.3s;
+}
+
+/* On mouse-over, add a deeper shadow */
+.card:hover {
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+}
+
+.card-container {
+  padding: 8px 24px 24px 24px;
+}
+
+.card h2 {
+  font-weight: 700;
+  font-size: 20px;
+  margin-bottom: 12px;
+  font-style: oblique;
+}
+
+.card p {
+  margin-bottom: 8px;
+}
+
+.card span {
+  font-weight: 700;
+}
+
+.card .button-container {
+  padding: 0 20px 20px 0;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.choose-button {
+  background-color: rgb(129, 181, 129);
+  color: white;
+}
+
+.choose-button:hover {
+  background-color: rgb(152, 208, 152);
+}
+
+.choose-button:active {
+  background-color: rgb(129, 181, 129);
+}
+
+#chosen-container {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  padding: 20px;
+}
+
+.chosen-card {
+  background-color: white;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  transition: 0.3s;
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  width: max-content;
+  padding: 5px 20px;
+}
+
+.chosen-card img {
+  height: 40px;
+  border-radius: 50%;
+}
+
+footer {
+  grid-area: footer;
+  height: 80px;
+  background-color: white;
+  box-shadow: 8px 0px 8px 0 rgba(0, 0, 0, 0.2);
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+footer img {
+  height: 40px;
+  width: 40px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin-right: 20px;
 }

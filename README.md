@@ -79,6 +79,7 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/t
 
 --------------
 
-
-<img width="1%" src="https://user-images.githubusercontent.com/31222514/195368124-52fe1a51-3ee5-4e89-97e3-d121c6475429.png" alt="profile picture"/>
-Challenge written by [David Rajcher](https://github.com/David-L-R)
+<p>
+<img width="3%" src="https://user-images.githubusercontent.com/31222514/195368124-52fe1a51-3ee5-4e89-97e3-d121c6475429.png" alt="profile picture"/>
+Challenge written by David Rajcher (https://github.com/David-L-R)
+  </p>

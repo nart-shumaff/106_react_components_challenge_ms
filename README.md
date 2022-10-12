@@ -35,11 +35,35 @@ The entire page is working, you need to take it apart and make sure it is still 
 
 <img width="1377" alt="design" src="https://user-images.githubusercontent.com/31222514/195375003-d7c32f4e-0b57-479f-9045-c2baec7cb1ea.png">
 
-## First Step 
+## Step 1 - visualize
 
-Before start coding, visualize how you want to break down the design. For example:
+Before start coding, visualize how you want to break down the design.
+
+We will start by breaking the design into different areas.
+- What are these areas in the current design? 
+
+## Step 2 - Break to big pieces (areas)
+
+We can break the design into the following areas:
+
+<img width="910" alt="big_pieces" src="https://user-images.githubusercontent.com/31222514/195378052-2b46170c-2e90-41a6-932c-cfe7e8281011.png">
+
+We can break this design into
+- Navbar
+- Main area (card container)
+- Sidebar
+- Footer
+
+This way we can already have major components and make it easier to read the code inside `App.js`.
+
+Once we did that, how can we break apart each area into smaller pieces?
+
+## Step 3 - Break each piece to little pieces
+
+
 
 <img width="1358" alt="components" src="https://user-images.githubusercontent.com/31222514/195376154-38259e8b-178f-4538-b23c-5f45c583b44c.png">
+
 
 
 --------------

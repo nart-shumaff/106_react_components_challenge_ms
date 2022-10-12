@@ -80,3 +80,5 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/t
 --------------
 
 Challenge written by [David Rajcher](https://github.com/David-L-R)
+
+<img style="border-radius: 50%" src="https://github.com/account"/>

@@ -56,6 +56,17 @@ We can break this design into
 - Sidebar
 - Footer
 
+Inside `src` folder create a new `components` folder.
+Insie you can create a folder for each component.
+
+Each component folder will have two files:
+- `Component.jsx`
+- `component.css`
+
+For example:
+- `Navbar.jsx`
+- `navbar.css`
+
 This way we can already have major components and make it easier to read the code inside `App.js`.
 
 Once we did that, how can we break apart each area into smaller pieces?

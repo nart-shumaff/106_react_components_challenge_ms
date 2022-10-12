@@ -1,6 +1,14 @@
-# Getting Started with Create React App
+# React Components Challenge
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+In this challenge, you will have to break down an entire page design into small components.
+
+How small? 
+
+Well, that's depends on you!
+
+But we will discuss when do we need to break it into smaller/bigger pieces. 
+
+In the [solution branch](https://github.com/Masterschool-Web/react_components_challenge/tree/solution) you can find my approach to 
 
 ## Available Scripts
 
@@ -68,3 +76,7 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+--------------
+
+Challenge written by [David Rajcher](https://github.com/David-L-R)

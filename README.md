@@ -81,7 +81,5 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/t
 
 Challenge written by [David Rajcher](https://github.com/David-L-R)
 
-<img style="border-radius: 50%" src="https://avatars.githubusercontent.com/u/31222514?s=400&u=92337b2289247868f949518d0a10520e83704771&v=4" alt="profile picture"/>
-
-![11zon_cropped](https://user-images.githubusercontent.com/31222514/195367901-7f7d12ec-6c8b-4059-b46a-54aa369360d6.png)
+<img width="10%" src="https://user-images.githubusercontent.com/31222514/195368124-52fe1a51-3ee5-4e89-97e3-d121c6475429.png" alt="profile picture"/>
 

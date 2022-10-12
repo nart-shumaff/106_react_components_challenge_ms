@@ -56,12 +56,12 @@ We can break this design into
 - Sidebar
 - Footer
 
-Inside `src` folder create a new `components` folder.
+Inside `src` folder create a new `layout` folder.
 Insie you can create a folder for each component.
 
 Each component folder will have two files:
-- `Component.jsx`
-- `component.css`
+- `LayoutComponent.jsx`
+- `layout_component.css`
 
 For example:
 - `Navbar.jsx`
@@ -82,6 +82,17 @@ So if we create an `Avatar` component, we can import it into each area.
 This way we can create a small piece once and reuse it every where! 
 
 Break down more of the areas into smaller pieces!
+
+Inside `src` folder create a new `layout` folder.
+Insie you can create a folder for each component.
+
+Each component folder will have two files:
+- `Component.jsx`
+- `component.css`
+
+For example:
+- `Avatar.jsx`
+- `avatar.css`
 
 For example:
 <img width="1358" alt="components" src="https://user-images.githubusercontent.com/31222514/195376154-38259e8b-178f-4538-b23c-5f45c583b44c.png">

@@ -35,6 +35,11 @@ The entire page is working, you need to take it apart and make sure it is still 
 
 <img width="1377" alt="design" src="https://user-images.githubusercontent.com/31222514/195375003-d7c32f4e-0b57-479f-9045-c2baec7cb1ea.png">
 
+## First Step 
+
+Before start coding, visualize how you want to break down the design. For example:
+
+<img width="1358" alt="components" src="https://user-images.githubusercontent.com/31222514/195376154-38259e8b-178f-4538-b23c-5f45c583b44c.png">
 
 
 --------------

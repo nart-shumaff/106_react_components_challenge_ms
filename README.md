@@ -81,4 +81,4 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/t
 
 Challenge written by [David Rajcher](https://github.com/David-L-R)
 
-<img style="border-radius: 50%" src="https://github.com/David-L-R" alt="profile picture"/>
+<img style="border-radius: 50%" src="https://avatars.githubusercontent.com/u/31222514?s=400&u=92337b2289247868f949518d0a10520e83704771&v=4" alt="profile picture"/>

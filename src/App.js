@@ -130,7 +130,7 @@ const App = () => {
                   return (
                     <div class='chosen-card'>
                       <div class='avatar'>
-                        <img src={character.image} />
+                        <img src={character.image} alt='character' />
                         <p>{character.name}</p>
                       </div>
                       <button
@@ -148,7 +148,7 @@ const App = () => {
         )}
       </aside>
       <footer>
-        <img src='../assets/avatar.png' />
+        <img src='../assets/avatar.png' alt='avatar' />
         <p>Created by David L. Rajcher</p>
       </footer>
     </div>

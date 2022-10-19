@@ -57,7 +57,9 @@ We can break this design into
 - Footer
 
 Inside `src` folder create a new `layout` folder.
-Insie you can create a folder for each component.
+Insie you can create a folder for each area.
+
+<img width="167" alt="folder_structure" src="https://user-images.githubusercontent.com/31222514/195384280-491c4af7-92a0-4109-a49a-428ca4dd5518.png">
 
 Each component folder will have two files:
 - `LayoutComponent.jsx`
@@ -66,6 +68,8 @@ Each component folder will have two files:
 For example:
 - `Navbar.jsx`
 - `navbar.css`
+
+<img width="169" alt="folder_Structure_layout" src="https://user-images.githubusercontent.com/31222514/195384326-739410e4-eb19-47ad-b9d3-c17c3d67da7f.png">
 
 This way we can already have major components and make it easier to read the code inside `App.js`.
 
@@ -93,6 +97,8 @@ Each component folder will have two files:
 For example:
 - `Avatar.jsx`
 - `avatar.css`
+
+<img width="171" alt="structure_components" src="https://user-images.githubusercontent.com/31222514/195384372-7b642f37-bbcc-432d-80e1-3f1a4bdc0a06.png">
 
 For example:
 <img width="1358" alt="components" src="https://user-images.githubusercontent.com/31222514/195376154-38259e8b-178f-4538-b23c-5f45c583b44c.png">

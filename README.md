@@ -13,7 +13,17 @@ In the [solution branch](https://github.com/Masterschool-Web/react_components_ch
 ## ⚙️ Run the project
 
 Inside the project's directory:
-```npm start```
+
+```bash
+
+# install all packages (necessary in order to run React)
+npm install
+
+# When installation is completed
+# Start the web server to run React in your browser
+# The browser tab should open automatically once the server is running in your terminal
+npm start
+```
 This should open a tab inside your browser with the project already running.
 
 ## 🎯 Goal

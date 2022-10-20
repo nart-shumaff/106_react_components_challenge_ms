@@ -20,8 +20,6 @@ Inside the project's directory:
 npm install
 
 # When installation is completed
-# Start the web server to run React in your browser
-# The browser tab should open automatically once the server is running in your terminal
 npm start
 ```
 This should open a tab inside your browser with the project already running.
